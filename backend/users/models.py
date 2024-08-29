@@ -23,5 +23,4 @@ def profile_create(sender,created,instance,**kwargs):
         profile=Profile.objects.create(user=instance)
         profile.save()
    
-
  
