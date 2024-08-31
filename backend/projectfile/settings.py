@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-r_(us-ucvy3fxn(qu%u82_vo9a)2n!d+rpac+q(ko3v_n-@p0c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -104,6 +104,13 @@ AUTH_PASSWORD_VALIDATORS = [
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    ],
+    
+    'DEFAULT_AUTHENTICATION_CLASES':[
+
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework,authentication.SessionAuthentication',
+
     ]
 }
 
